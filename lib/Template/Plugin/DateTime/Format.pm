@@ -38,6 +38,10 @@ sub format {
 
 __END__
 
+=head1 NAME
+
+Template::Plugin::DateTime::Format - format DateTime objects from inside TT with DateTime::Format-style formatters
+
 =head1 SYNOPSIS
 
    [% USE f = DateTime::Format('DateTime::Format::Strptime', { pattern => "%T" }) %]
@@ -106,3 +110,4 @@ Copyright (c) 2008 Jonathan Rockway.
 
 This module is free software.  You may redistribute it under the same
 terms as perl itself.
+

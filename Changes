@@ -1,6 +1,7 @@
 Revision history for Perl module Template::Plugin::DateTime::Format
 
 0.03 2014-01-10 NEILB
+    - Switched dist.ini to my usual setup
     - Reformatted this file as per CPAN::Changes::Spec
 
 0.02 2010-12-27 JROCKWAY

@@ -1,8 +1,12 @@
-Change history for Template-Plugin-DateTime-Format
+Revision history for Perl module Template::Plugin::DateTime::Format
 
-0.01    Mon Jul 28 15:14:12 CDT 2008
-        - first version
+0.03 2014-01-10 NEILB
+    - Reformatted this file as per CPAN::Changes::Spec
 
-{{$NEXT}}
+0.02 2010-12-27 JROCKWAY
+    - convert to dzil
+    - fix test
 
-0.02     Mon Dec 27 06:50:51 CST 2010
+0.01 2008-07-28 JROCKWAY
+    - first version
+

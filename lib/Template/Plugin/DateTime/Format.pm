@@ -1,15 +1,17 @@
 package Template::Plugin::DateTime::Format;
-# ABSTRACT: format DateTime objects from inside TT with C<DateTime::Format>-style formatters
+
+# ABSTRACT: format DateTime objects from inside TT with DateTime::Format-style formatters
+
 use strict;
 use warnings;
 use DateTime;
-use Class::MOP;
+use Class::Load;
 
 use base 'Template::Plugin';
 
 sub new {
     my ($class, $context, $formatter_class, $new_args, $format_args) = @_;
-    Class::MOP::load_class($formatter_class || die 'need class name');
+    Class::Load::load_class($formatter_class || die 'need class name');
 
     my @new_args = ref $new_args eq 'ARRAY' ? @$new_args : $new_args;
     { no warnings;

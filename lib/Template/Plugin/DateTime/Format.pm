@@ -92,6 +92,10 @@ Called by TT to create a new formatter.
 
 Formats C<$datetime>.
 
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/Template-Plugin-DateTime-Format>
+
 =head1 AUTHOR
 
 Jonathan Rockway C<< <jrockway@cpan.org> >>

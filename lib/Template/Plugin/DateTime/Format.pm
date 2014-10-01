@@ -2,6 +2,7 @@ package Template::Plugin::DateTime::Format;
 
 # ABSTRACT: format DateTime objects from inside TT with DateTime::Format-style formatters
 
+use 5.006;
 use strict;
 use warnings;
 use DateTime;

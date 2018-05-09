@@ -14,10 +14,15 @@ sub new {
     my ($class, $context, $formatter_class, $new_args, $format_args) = @_;
     Class::Load::load_class($formatter_class || die 'need class name');
 
-    my @new_args = ref $new_args eq 'ARRAY' ? @$new_args : $new_args;
-    { no warnings;
-      $format_args = [ $format_args ] unless ref $format_args eq 'ARRAY';
+    unless (defined $format_args) {
+        $format_args = [];
     }
+
+    unless (ref $format_args eq 'ARRAY') {
+        $format_args = [ $format_args ];
+    }
+
+    my @new_args = ref $new_args eq 'ARRAY' ? @$new_args : $new_args;
 
     bless {
 	_CONTEXT    => $context,
@@ -30,7 +35,7 @@ sub format {
     my ($self, $date) = @_;
 
     my $fmt = $self->{formatter};
-    my @args = $self->{format_args};
+    my @args = @{ $self->{format_args} };
     return $fmt->format_datetime($date, @args);
 }
 
